@@ -1,0 +1,6 @@
+# Node things
+node_modules/
+
+# Elm things
+elm-stuff/
+elm.js

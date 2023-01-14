@@ -1,0 +1,49 @@
+query ControlBuses {
+  buses {
+    id
+    name
+    rows
+    seats {
+      front
+      leftRow
+      rightRow
+      back
+    }
+  }
+}
+
+query TestBuses {
+  buses {
+    id
+    name
+    rows
+    seats {
+      front
+      ...SideSeats
+      back
+    }
+  }
+}
+
+fragment SideSeats on Seats {
+  rightRow # changed order! 
+  leftRow
+}
+
+query TestBusesSecond {
+  buses {
+    id
+    name
+    rows
+    seats {
+      ...Seats
+    }
+  }
+}
+
+fragment Seats on Seats {
+  front
+  back
+  leftRow
+  rightRow
+}

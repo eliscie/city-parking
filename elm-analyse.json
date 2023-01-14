@@ -1,0 +1,6 @@
+{
+    "excludedPaths": [
+        "api",
+        "src/CityParking"
+    ]
+}
